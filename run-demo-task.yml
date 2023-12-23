@@ -6,5 +6,5 @@
       shell: cat /etc/os-release
       register: out
 
-    - debug: msg="{{ out.stdout }}"
-    - debug: msg="{{ out.stderr }}"  
+    - debug: msg="{{ out.stdout | to_nice_json }}"
+    - debug: msg="{{ out.stderr | to_nice_json }}"  
