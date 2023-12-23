@@ -4,4 +4,4 @@
   become: true
   tasks:
     - name: update apt packages
-      shell: lsb_release -a
+      shell: cat /etc/os-release
