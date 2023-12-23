@@ -6,5 +6,7 @@
       shell: cat /etc/os-release
       register: out
 
-    - debug: msg="{{ out.stdout_lines | join('\n') }}"
-    - debug: msg="{{ out.stderr_lines | join('\n') }}"  
+    - debug:
+        msg: "{{ out.stdout_lines }}"
+    - debug:
+        msg: "{{ out.stderr_lines }}"  
