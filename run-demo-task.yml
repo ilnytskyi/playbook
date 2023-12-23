@@ -4,3 +4,7 @@
   tasks:
     - name: Check OS version
       shell: cat /etc/os-release
+      register: out
+
+    - debug: msg="{{ out.stdout }}"
+    - debug: msg="{{ out.stderr }}"  
