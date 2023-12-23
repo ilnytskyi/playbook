@@ -5,6 +5,8 @@
     - name: Check OS version
       shell: cat /etc/os-release
       register: out
+      no_log: false
+      changed_when: false
 
-    - debug: msg="{{ out.stdout }}"
-    - debug: msg="{{ out.stderr }}"  
+    - debug: msg="{{ out.stdout_lines }}"
+    - debug: msg="{{ out.stderr_lines }}"  
